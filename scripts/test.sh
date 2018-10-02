@@ -10,4 +10,4 @@ yarn jshint --version;
 yarn jshint lib bin;
 echo "No code lint issues found.";
 
-mocha tests
+yarn mocha tests
