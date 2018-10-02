@@ -3,7 +3,15 @@ const mainModule = require('../lib');
 
 const getArg = (marker, isBoolean) => {
   const pos = process.argv.indexOf(marker);
-  return (pos === -1) ? -1 : (isBoolean ? pos : pos + 1);
+  if (pos === -1) {
+    return -1;
+  }
+
+  if (isBoolean) {
+    return pos;
+  }
+
+  return pos + 1;
 };
 
 const login = () => {
